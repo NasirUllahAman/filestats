@@ -13,5 +13,6 @@ func main() {
 		fmt.Errorf(err.Error())
 		return
 	}
+	utils.CountCharacters("the main vsc page have")
 	fmt.Println(data)
 }
