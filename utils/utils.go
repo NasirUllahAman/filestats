@@ -12,6 +12,7 @@ func WordCount(data []byte) int {
 	}
 	return count
 }
+
 func LineCount(data []byte) int {
 	count := 0
 	for i := 0; i < len(data); i++ {
