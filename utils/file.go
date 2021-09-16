@@ -1,29 +1,13 @@
-//package utils
-package main
+package utils
 
 import (
-	"fmt"
 	"io/ioutil"
-
-	"github.com/NasirUllahAman/filestats/utils"
 )
 
-func ReadFile(filePath string) (string, error) {
+func ReadLocalFile(filePath string) ([]byte, error) {
 	data, err := ioutil.ReadFile(filePath)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
-	return string(data), nil
-}
-func main() {
-	filePath := "Readme.md"
-	data, err := utils.ReadFile(filePath)
-	if err != nil {
-		fmt.Println(err.Error())
-		return
-	}
-
-	fmt.Println(data)
-	ReadFile(data)
-
+	return data, nil
 }

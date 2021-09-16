@@ -1,24 +1,14 @@
 package utils
 
-import (
-	"fmt"
-)
-
-func CharCount(rdr []byte) {
-	fmt.Println(len(rdr))
-	// for i := 0; i < len(rdr); i++ {
-	// 	totalCh:=len(rdr)
-	// 	totalWord:=""
-
-	//	}
-
+func CharCount(data []byte) int {
+	return len(data)
 }
-func wordcount(rdr []byte) {
+func WordCount(data []byte) int {
 	count := 0
-	for i := 0; i < len(rdr); i++ {
-		count += 1
-
+	for i := 0; i < len(data); i++ {
+		if string(data[i]) == " " || i == len(data)-1 {
+			count++
+		}
 	}
-	return
-
+	return count
 }

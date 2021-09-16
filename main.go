@@ -2,22 +2,20 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 
 	"github.com/NasirUllahAman/filestats/utils"
 )
 
 func main() {
 	filePath := "Readme.md"
-	data, err := ioutil.ReadFile(filePath)
+	data, err := utils.ReadLocalFile(filePath)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 
 	fmt.Println(string(data))
-	utils.CharCount(data)
-	fmt.Println()
-	fmt.Println()
-
+	charCount := utils.CharCount(data)
+	wordCount := utils.WordCount(data)
+	fmt.Printf("Word Count: %d\nCharacter Count: %d\n", wordCount, charCount)
 }
