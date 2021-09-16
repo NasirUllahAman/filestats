@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	filePath := "Readme.md"
+	filePath := "lorem.txt"
 	data, err := utils.ReadLocalFile(filePath)
 	if err != nil {
 		fmt.Println(err.Error())
@@ -17,5 +17,6 @@ func main() {
 	fmt.Println(string(data))
 	charCount := utils.CharCount(data)
 	wordCount := utils.WordCount(data)
-	fmt.Printf("Word Count: %d\nCharacter Count: %d\n", wordCount, charCount)
+	LineCount := utils.LineCount(data)
+	fmt.Printf("Word Count: %d\nCharacter Count: %d\n", "count line", wordCount, charCount, LineCount)
 }
