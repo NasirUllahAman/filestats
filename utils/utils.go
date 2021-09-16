@@ -1,16 +1,23 @@
 package utils
 
-import "strings"
+import (
+	"fmt"
+)
 
-func CountCharacters(data string) int {
-	count := 0
-	return count
+func charCount(rdr []byte) {
+	fmt.Println(len(rdr))
+	// for i := 0; i < len(rdr); i++ {
+	// 	totalCh:=len(rdr)
+	// 	totalWord:=""
+
+	//	}
+
 }
-func WordCount(s string) map[string]int {
-	words := strings.Fields(s)
-	m := make(map[string]int)
-	for _, word := range words {
-		m[word] += 1
+func wordcount(rdr []byte) {
+	count := 0
+	for i := 0; i < len(rdr); i++ {
+		count += 1
 	}
-	return m
+	return
+
 }

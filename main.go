@@ -2,17 +2,22 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"github.com/NasirUllahAman/filestats/utils"
 )
 
 func main() {
 	filePath := "Readme.md"
-	data, err := utils.ReadFile(filePath)
+	data, err := ioutil.ReadFile(filePath)
 	if err != nil {
-		fmt.Errorf(err.Error())
+		fmt.Println(err.Error())
 		return
 	}
-	utils.CountCharacters("the main vsc page have")
-	fmt.Println(data)
+
+	fmt.Println(string(data))
+	utils.CharCount(data)
+	fmt.Println()
+	fmt.Println()
+
 }
