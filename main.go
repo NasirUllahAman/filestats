@@ -18,5 +18,7 @@ func main() {
 	charCount := utils.CharCount(data)
 	wordCount := utils.WordCount(data)
 	LineCount := utils.LineCount(data)
-	fmt.Printf("Word Count: %d\nCharacter Count: %d\n line count:%d \n", wordCount, charCount, LineCount)
+	DuplicateWord := utils.DuplicateWord(string(data))
+
+	fmt.Printf("Word Count: %d\nCharacter Count: %d\nline count:%d\n, DuplicateWord:\n", wordCount, charCount, LineCount, DuplicateWord)
 }
