@@ -25,9 +25,9 @@ func LineCount(data []byte) int {
 	return count
 }
 
-func DuplicateWord(d string) map[string]int {
+func DuplicateWord(data string) map[string]int {
 
-	input := strings.Fields(d)
+	input := strings.Fields(data)
 	count := make(map[string]int)
 	for _, word := range input {
 		_, matched := count[word]
